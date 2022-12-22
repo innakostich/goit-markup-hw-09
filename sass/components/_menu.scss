@@ -1,0 +1,145 @@
+.menu-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color:var(--contacts-text-color);
+  top: 0;
+  right: 0;
+  padding: 48px 83px 48px 40px;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.js-menu-container{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu__toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  &:hover,
+  &:focus{
+    background-color: rgba(0, 0, 0, 0.1); 
+  }
+
+}
+
+@media (min-width: 768px) {
+  .menu__toggle {
+    display: none;
+  }
+}
+
+.menu-container .menu__toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  
+}
+
+
+
+.mobile__menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile__menu__link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--primary-text-color);
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+
+  &--current {
+    color: var(--accent-color);
+  }
+}
+
+.mobile__contacts__tel {
+  display: block;
+  margin-bottom: 32px;
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mobile__contacts__mail{
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  
+}
+.mobile__social{
+  display: flex;
+  gap: 20px;
+  
+  
+}
+.mobile__social__item {
+  position: relative;
+  
+  &:not(:first-child)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 1px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+.mobile__social__link{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  color:var(--accent-color);
+}
+
+
+
+
+
+
