@@ -669,21 +669,7 @@
               </svg></button>
              </div>
            </form>
-           <script>
-            (() => {
-              document
-                .querySelector('.form-subscribtion')
-                .addEventListener('submit', e => {
-                  e.preventDefault();
-      
-                  new FormData(e.currentTarget).forEach((value, name) =>
-                    console.log(`${name}: ${value}`),
-                  );
-      
-                  e.currentTarget.reset();
-                });
-            })();
-          </script>
+          
         </div>
     </div>
   </div> 
